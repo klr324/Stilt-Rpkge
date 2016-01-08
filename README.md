@@ -1,4 +1,4 @@
-# Stilt-Rpkge
+# stilt
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/stilt)](https://cran.r-project.org/web/packages/stilt/index.html)
 
@@ -31,14 +31,14 @@ Additionally we recommend you check out the technical report. This report descri
 
 ## Development notes
 
-**stilt** depends on R(™¢™2.15.1), fields
+**stilt** depends on R(≥2.15.1), fields
 
 ## Authors
 
-Roman, Olson, Won Chang, Klaus Keller, and Murali Haran
+Roman Olson, Won Chang, Klaus Keller, and Murali Haran
 
 ## License
 
 **stilt** is licensed under the GNU General Public License, version 3 or later.
 
-_This work was supported by the national Science Foundation through the Network for Sustainable Climate Risk Management (SCRiM) under NSF cooperative agreement GEO-1240507._
+_This work was supported by the National Science Foundation through the Network for Sustainable Climate Risk Management (SCRiM) under NSF cooperative agreement GEO-1240507._
