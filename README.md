@@ -19,7 +19,7 @@ To install the latest development version directly from Github, run **devtools**
 
 ```R
 install.packages("devtools") #if not already installed
-devtools::install_github("klr324/Stilt-Rpkge")
+devtools::install_github("scrim-network/Stilt-Rpkge")
 ```
 
 ##Getting Started
