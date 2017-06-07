@@ -19,10 +19,10 @@ To install the latest development version directly from Github, run **devtools**
 
 ```R
 install.packages("devtools") #if not already installed
-devtools::install_github("klr324/Stilt-Rpkge")
+devtools::install_github("scrim-network/Stilt-Rpkge")
 ```
 
-##Getting Started
+## Getting Started
 
 To learn more we highly recommend you check out the [reference manual](https://cran.r-project.org/web/packages/stilt/stilt.pdf). The reference manual explains each stilt function/dataset in-depth and includes annotated examples.
 
