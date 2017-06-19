@@ -78,7 +78,8 @@ List with components
 [test run index, time index]}
 \item{$emul.std.test}{Emulator prediction standard deviation at test parameter
 settings [row,col] = [test run index, time index]}
-The time vector for columns of all components is
+\item{$coverage}{Empirical coverage of 1 std range, expressed as a fraction. Ideally, this should be close to approximately 0.68. }
+The time vector for columns of all matrix components is
 \code{final.emul$t.vec}
 }
 \references{
