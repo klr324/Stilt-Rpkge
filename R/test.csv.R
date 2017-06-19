@@ -104,6 +104,22 @@ if (any(!predict.ok)) {
   cat("NOTE:", sum(!predict.ok), " predictions points were omitted as they are out of range\n")
 }
 
+# COVERAGE 
+#===========
+emul.upper <- emul.out.test + emul.std.test #[row, col] = [test run, time]
+emul.lower <- emul.out.test - emul.std.test #[row, col] = [test run, time]
+# Total data points with finite predictions
+totalfinitepoints     <- n.par*sum(predict.ok)
+if (totalfinitepoints == 0) {stop("No valid points to predict")}
+totalinrange <- 0 
+for (test.run in 1:num.test) {
+    if (is.finite(emul.out.test[test.run,1])) {
+      inrange <- (model.out.test[test.run,] > emul.lower[test.run,]) &
+                 (model.out.test[test.run,] < emul.upper[test.run,])
+      totalinrange <- totalinrange + sum(inrange)
+    }
+}
+coverage <- totalinrange/totalfinitepoints
 
 # PLOT EMULATOR AND MODEL OUTPUT, IF NEEDED #!+
 #===================================
@@ -130,10 +146,9 @@ if (make.plot) {
 
 }
 
-
-# OUTPUT #!+
+# OUTPUT 
 #========
 test.csv.out <- list(model.out.test=model.out.test, emul.out.test=emul.out.test,
-                     emul.std.test=emul.std.test)
+                     emul.std.test=emul.std.test, coverage=coverage)
 test.csv.out
 }
