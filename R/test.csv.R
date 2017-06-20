@@ -106,16 +106,18 @@ if (any(!predict.ok)) {
 
 # COVERAGE 
 #===========
-emul.upper <- emul.out.test + emul.std.test #[row, col] = [test run, time]
-emul.lower <- emul.out.test - emul.std.test #[row, col] = [test run, time]
+emul.upper <- emul.out.test + 1.96*emul.std.test #[row, col] = [test run, time] 
+emul.lower <- emul.out.test - 1.96*emul.std.test #[row, col] = [test run, time]
 # Total data points with finite predictions
 totalfinitepoints     <- n.par*sum(predict.ok)
 if (totalfinitepoints == 0) {stop("No valid points to predict")}
 totalinrange <- 0 
 for (test.run in 1:num.test) {
+    cat("test.run:", test.run, '\n')
     if (is.finite(emul.out.test[test.run,1])) {
       inrange <- (model.out.test[test.run,] > emul.lower[test.run,]) &
                  (model.out.test[test.run,] < emul.upper[test.run,])
+      cat(sum(inrange), "\n")
       totalinrange <- totalinrange + sum(inrange)
     }
 }
