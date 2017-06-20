@@ -51,6 +51,8 @@ GNU General Public License for more details. In addition, the authors
     settings for a simple 1-parameter ensemble example}
   \item{emul.1D}{Gaussian Process emulator that has been fit to the
     aforementioned model ensemble output}
+  \item{Data.AR1.Korea.model and Data.AR1.Korea.par}{Temperature variability and
+    future change for 29 CMIP5 global climate models}
   \item{Data.UVic.model and Data.UVic.par}{Model output and parameter
     settings for temperature anomaly output from 3-parameter ensemble of
     climate model UVic ESCM}
@@ -76,8 +78,9 @@ LazyLoad: \tab no\cr
 }
 \section{Limitations and Caveats}{
   \enumerate{
-    \item The emulator will not work well for 'jagged' model response
-    surfaces (high nugget)
+    \item The emulator (like any other available software packages)
+    will not work well for 'jagged' model response
+    surfaces (high nugget): predictive uncertainty will be too high. 
     \item The emulator is restricted to output at regular intervals in
     time and space
     \item The code has not been tested under conditions of extreme high
