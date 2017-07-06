@@ -127,8 +127,7 @@ if (twice) {
   
 } else {
     # If only one optimization is performed #!+
-    cat("CAUTION! The optimization might only find a local minimum. It is recommended\n")
-    cat("to perform optimization a second time with a random starting parameter vector\n\n")
+    cat("CAUTION! The optimization might only find a local minimum.\n")
 }
 
 

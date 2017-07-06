@@ -3,7 +3,7 @@ function(optresult) {
   
 # Determine if optimization was successful and print a message #!+
   if (optresult$convergence == 0) {
-    cat("Optimization SUCCESSFUL!!! Optimization message below:\n\n")
+    cat("Optimization SUCCESSFUL! Optimization message below:\n\n")
     cat(optresult$message, '\n\n')
     cat("Final parameters\n", names(optresult$par), '\n', optresult$par, '\n\n')
     cat(optresult$iterations, " iterations were performed\n")
