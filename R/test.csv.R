@@ -2,7 +2,7 @@ test.csv <-
 function(final.emul, num.test, plot.std, theseed=NULL, test.runind=NULL,
                      make.plot=TRUE) {
 
-  
+
 # PRELIMINARIES #!+
 #===============
 
@@ -21,7 +21,7 @@ if (!is.null(theseed)) {
    }
 }
 
-# LOAD EMULATOR #!+ 
+# LOAD EMULATOR #!+
 #==============
 n.par     <- final.emul$n
 p.par     <- final.emul$p
@@ -50,13 +50,13 @@ if (is.null(test.runind)) {
 # WITHHOLD TEST RUNS FROM THE EMULATOR AND THE MODEL #!+
 #=====================================
 # Withhold runs from the emulator #!+
-mysub.emul     <- emul.subset(final.emul, test.runind) 
+mysub.emul     <- emul.subset(final.emul, test.runind)
 
 
 # Withhold runs from model, and from the parameter matrix #!+
 # Full model output matrix [row, col] = [run index, time index]
 # Corresponding times for cols is final.out$t.vec
-# This command stacks the matrix by columns 
+# This command stacks the matrix by columns
 model.out      <- matrix(as.vector(final.emul$Y.mat), nrow=p.par, ncol=n.par) #!+
 # model.out.test => Model output at test parameter settings [row,col] =
 # [test run index, time index]
@@ -66,7 +66,7 @@ if (num.test == 1) {
    model.out.test <- t(as.matrix(model.out[test.runind,]))
    Theta.mat.sub  <- t(as.matrix(final.emul$Theta.mat[test.runind,]))
 } else {
-   model.out.test <- model.out[test.runind,] 
+   model.out.test <- model.out[test.runind,]
    Theta.mat.sub  <- as.matrix(final.emul$Theta.mat[test.runind,]) #!+
 }
 
@@ -86,31 +86,31 @@ for (test.run in 1:num.test) {
    cat("Predicting for run number: ", test.runind[test.run], "\n")
    out <- try(emul.predict(mysub.emul, Theta.mat.sub[test.run,]), silent=TRUE)#!+
    # Prediction is OK #!+
-   if (is.list(out)) { 
-     emul.out.test[test.run,] <- out$mean 
-     emul.std.test[test.run,] <- sqrt(diag(out$covariance)) 
-     predict.ok[test.run]     <- TRUE 
+   if (is.list(out)) {
+     emul.out.test[test.run,] <- out$mean
+     emul.std.test[test.run,] <- sqrt(diag(out$covariance))
+     predict.ok[test.run]     <- TRUE
    # Prediction gives error #!+
    } else {
      cat("  ...Prediction error. Likely because prediction parameters are out of bounds\n")
      emul.out.test[test.run,] <- NA
      emul.std.test[test.run,] <- NA
-     predict.ok[test.run]     <- FALSE 
+     predict.ok[test.run]     <- FALSE
    }
 }
 
 #ERROR EXCEPTION #!+
 if (any(!predict.ok)) {
-  cat("NOTE:", sum(!predict.ok), " predictions points were omitted as they are out of range\n")
+  cat("NOTE:", sum(!predict.ok), " prediction points were omitted as they are out of range\n")
 }
 
-# COVERAGE 
+# COVERAGE
 #===========
-emul.upper <- emul.out.test + 1.96*emul.std.test #[row, col] = [test run, time] 
+emul.upper <- emul.out.test + 1.96*emul.std.test #[row, col] = [test run, time]
 emul.lower <- emul.out.test - 1.96*emul.std.test #[row, col] = [test run, time]
 # Total data points with finite predictions
 totalfinitepoints     <- n.par*sum(predict.ok)
-totalinrange <- 0 
+totalinrange <- 0
 for (test.run in 1:num.test) {
     if (is.finite(emul.out.test[test.run,1])) {
       inrange <- (model.out.test[test.run,] > emul.lower[test.run,]) &
@@ -122,7 +122,7 @@ coverage <- totalinrange/totalfinitepoints
 
 # PLOT EMULATOR AND MODEL OUTPUT, IF NEEDED #!+
 #===================================
-if (make.plot) { 
+if (make.plot) {
 
    # Plot set-up #!+
    plot.default(NA, xlim=c(min(t.vec), max(t.vec)), ylim=c(min(model.out),
@@ -131,11 +131,11 @@ if (make.plot) {
 
 
    # Plot emulator predictions #!+
-   all.predict <- seq(1:num.test) 
+   all.predict <- seq(1:num.test)
    for (test.run in all.predict[predict.ok]) {
-         lines(t.vec, model.out.test[test.run,], col="orange", lwd=3) 
-         lines(t.vec, emul.out.test[test.run,], col="brown") 
-         if (plot.std) { 
+         lines(t.vec, model.out.test[test.run,], col="orange", lwd=3)
+         lines(t.vec, emul.out.test[test.run,], col="brown")
+         if (plot.std) {
             lines(t.vec, emul.out.test[test.run,] - emul.std.test[test.run,], col="brown",
               lty=2)
             lines(t.vec, emul.out.test[test.run,] + emul.std.test[test.run,], col="brown",
@@ -145,7 +145,7 @@ if (make.plot) {
 
 }
 
-# OUTPUT 
+# OUTPUT
 #========
 test.csv.out <- list(model.out.test=model.out.test, emul.out.test=emul.out.test,
                      emul.std.test=emul.std.test, coverage=coverage)
