@@ -39,6 +39,11 @@ Additionally we recommend you check out the technical report. This report descri
 
 Roman Olson, Won Chang, Klaus Keller, and Murali Haran
 
+## Maintainer and Contact
+
+Won Chang <stilt.package1@gmail.com>
+(TO EDIT: Kelsey Ruckert; datamgmt@scrim.psu.edu)
+
 ## License
 
 **stilt** is licensed under the GNU General Public License, version 3 or later.
