@@ -19,7 +19,9 @@ To install the latest development version directly from Github, run **devtools**
 
 ```R
 install.packages("devtools") ##if not already installed
+library(devtools)
 devtools::install_github("scrim-network/Stilt-Rpkge")
+library(stilt)
 ```
 
 ## Getting Started
