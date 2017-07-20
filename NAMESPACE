@@ -9,3 +9,8 @@ export(test.csv)
 
 # Import fields #!+
 import(fields)
+
+# Import undefined global functions or variables: #!+
+importFrom("grDevices", "topo.colors")
+importFrom("graphics", "filled.contour", "lines", "par", "plot", "plot.default", "title")
+importFrom("stats", "lm", "nlminb", "runif")
