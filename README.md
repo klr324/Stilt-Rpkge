@@ -41,7 +41,7 @@ Roman Olson, Won Chang, Klaus Keller, and Murali Haran
 
 ## Maintainer and Contact
 
-Kelsey Ruckert <datamgmt@scrim.psu.edu>
+Kelsey Ruckert: <datamgmt@scrim.psu.edu>
 
 ## License
 
