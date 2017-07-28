@@ -29,7 +29,7 @@ library(stilt)
 To learn more we highly recommend you check out the [reference manual](https://cran.r-project.org/web/packages/stilt/stilt.pdf). The reference manual explains each stilt function/dataset in-depth and includes annotated examples.
 
 Additionally we recommend you check out the technical report. This report describes the statistical background and equations for the separable emulator.  
-[R. Olson and W. Chang (2013): _Mathematical framework for a separable Gaussian Process Emulator_, Technical Report](http://scrimhub.org/resources/stilt/Olson_and_Chang.stilt_emulator_technical_report.Nov_2013.pdf)
+[R. Olson and W. Chang (2013):_Mathematical framework for a separable Gaussian Process Emulator, Technical Report](http://www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf)
 
 ## Development notes
 
