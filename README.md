@@ -41,8 +41,7 @@ Roman Olson, Won Chang, Klaus Keller, and Murali Haran
 
 ## Maintainer and Contact
 
-Won Chang <stilt.package1@gmail.com>
-(TO EDIT: Kelsey Ruckert; datamgmt@scrim.psu.edu)
+Kelsey Ruckert <datamgmt@scrim.psu.edu>
 
 ## License
 
