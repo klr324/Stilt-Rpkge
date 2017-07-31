@@ -1,7 +1,5 @@
 # stilt
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/stilt)](https://cran.r-project.org/web/packages/stilt/index.html)
-
 **stilt** is an open-source R library for Separable Gaussian Process Interpolation, a type of statistical emulation.
 
 The package, which is available on [CRAN](https://cran.r-project.org/web/packages/stilt/index.html), comprises a set of R functions to build and use an interpolator (emulator) for time series or 1D regularly spaced data in multidimensional space. The standard usage is for interpolating time-resolved computer model output between model parameter settings. It can also be used for interpolating multivariate data (e.g., oceanographic time-series data, etc.) in space. There are functions to test the emulator using cross-validation, and to produce contour plots over 2D slices in model input parameter (or physical) space.
