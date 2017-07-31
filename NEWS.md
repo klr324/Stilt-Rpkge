@@ -13,9 +13,9 @@ Changes:
 
 Changes:
 
-* Fixed bug in ...?
+* Change of stilt maintainer.
 
 # stilt v1.0.0 (Release date: 2013-12-24)
 ==============
 
-* Initial release
+* Initial release.
