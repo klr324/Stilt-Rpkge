@@ -1,4 +1,4 @@
-# stilt v1.1.0 (Release date: 2017-mm-dd)
+# stilt v1.1.0 (Release date: 2017-07-31)
 ==============
 
 Changes:
