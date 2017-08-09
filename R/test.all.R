@@ -1,6 +1,6 @@
 test.all <-
 function(final.emul, t.plot) {
-  
+
     # PRELIMINARIES #!+
     #==================
     p.par <- final.emul$p
@@ -24,7 +24,7 @@ function(final.emul, t.plot) {
 
     # PERFORM CROSS-VALIDATION #!+
     for (run.out in 1:p.par) {
-       csv.out <- test.csv(final.emul, 1, FALSE, NULL, run.out, FALSE) 
+       csv.out <- test.csv(final.emul, 1, FALSE, NULL, run.out, FALSE)
        model.out.all[run.out,] <- csv.out$model.out.test
        emul.out.all[run.out,]  <- csv.out$emul.out.test
        emul.std.all[run.out,]  <- csv.out$emul.std.test
@@ -32,14 +32,14 @@ function(final.emul, t.plot) {
 
     # CALCULATE NORMALIZED ERRORS #!+
     # Model extremes for each time index #!+
-    model.max               <- apply(model.out.all, 2, max) 
-    model.min               <- apply(model.out.all, 2, min) 
+    model.max               <- apply(model.out.all, 2, max)
+    model.min               <- apply(model.out.all, 2, min)
     model.range             <- model.max - model.min
     stopifnot(model.range[t.plot] != 0) #Exception for zero range
 
     # Calculate normalized errors #!+
-    model.range.mat         <- matrix(model.range, nrow=p.par, ncol=n.par, byrow=TRUE) 
-    emul.std.all.nm         <- ((model.out.all - emul.out.all)/model.range.mat)*100 
+    model.range.mat         <- matrix(model.range, nrow=p.par, ncol=n.par, byrow=TRUE)
+    emul.std.all.nm         <- ((model.out.all - emul.out.all)/model.range.mat)*100
 
 
     # PLOT #!+
@@ -53,7 +53,7 @@ function(final.emul, t.plot) {
     plot(model.out.all[,t.plot], emul.out.all[,t.plot], xlab="True Output",
        ylab="Predicted Output", pch=19, cex.axis=1, cex.lab=1)
     lines(c(min(1.5*model.out.all), max(1.5*model.out.all)), c(min(1.5*model.out.all),
-            max(1.5*model.out.all)), col="blue") 
+            max(1.5*model.out.all)), lty=2)
 
     # Relative errors (%) #!+
     plot(emul.std.all.nm[,t.plot], xlab="Excluded Run Number", ylab="Prediction Error (% of total range)",
