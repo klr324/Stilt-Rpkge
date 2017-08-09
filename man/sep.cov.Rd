@@ -58,7 +58,7 @@ List with components
 \references{
       R. Olson and W. Chang (2013): Mathematical framework for a separable
 Gaussian Process Emulator. Tech. Rep., available from
-\href{http://www.geosc.psu.edu/~rtonkono}{www.geosc.psu.edu/~rtonkono}.
+\href{http://www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}{www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}.
 }
 \seealso{
 \code{\link{emul.predict}}
