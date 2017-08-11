@@ -1,4 +1,4 @@
-stilt v1.1.0 (Release date: 2017-08-11)
+# stilt v1.1.0 (Release date: 2017-08-11)
 ==============
 
 Changes:
@@ -8,14 +8,14 @@ Changes:
 * Housekeeping changes: added README, NEWS (including retroactive listing of changes), and cran-comments file.
 * Change of stilt maintainer.
 
-stilt v1.0.1 (Release date: 2014-05-12)
+# stilt v1.0.1 (Release date: 2014-05-12)
 ==============
 
 Changes:
 
 * Change of stilt maintainer.
 
-stilt v1.0.0 (Release date: 2013-12-24)
+# stilt v1.0.0 (Release date: 2013-12-24)
 ==============
 
 * Initial release.
