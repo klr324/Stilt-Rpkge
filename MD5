@@ -32,11 +32,11 @@ f7cdb6de0b51c9d8b5417801acb2d305 *man/Data.Sicopolis.par.Rd
 2d87e070dd891a16487268511e81234c *man/Data.UVic.par.Rd
 4e71e5a9d42ae55deebfd56ecb621d69 *man/emul.1D.Rd
 a6b494fab2724d174af9a4a06e9555a3 *man/emul.Sicopolis.Rd
-b221911baa9a933e96cf4cee37fcde69 *man/emul.predict.Rd
-4175f5306a5b7eb4d05654bd4917e06f *man/emulator.Rd
-c34de3b64ea194d1096fcbc6990de4f9 *man/rsurface.plot.Rd
-531e1a070bf817aefe0cdc85f37f815d *man/sep.cov.Rd
+51945d8238d6efe760f2c62f43921a7c *man/emul.predict.Rd
+f91588b5f77c87a43bfe352933953ede *man/emulator.Rd
+51949cf20f701917b22dc6fa59d502c7 *man/rsurface.plot.Rd
+0489b928564dd1c9b65d7dafd6f2278e *man/sep.cov.Rd
 02b3c6e4d705da2b991e526b2c07f3ee *man/stilt-internal.Rd
-54aee305fa9df21c2b6c80da98c2f9ee *man/stilt-package.Rd
+bb9987431e26fd46b35f26612de48943 *man/stilt-package.Rd
 91c8268e01a9f477409e69008688bcdc *man/test.all.Rd
-4e71fc807d6a6b5c932494ddca603dea *man/test.csv.Rd
+33698d6c45f341f638d88598b8375476 *man/test.csv.Rd
