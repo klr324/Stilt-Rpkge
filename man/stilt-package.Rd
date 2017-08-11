@@ -70,8 +70,8 @@ GNU General Public License for more details. In addition, the authors
 \tabular{ll}{
 Package: \tab stilt\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-12-23\cr
+Version: \tab 1.1.0\cr
+Date: \tab 2017-08-11\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab no\cr
 }
