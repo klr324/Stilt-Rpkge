@@ -84,7 +84,7 @@ The time vector for columns of all matrix components is
 }
 \references{
   R. Olson and W. Chang (2013): Mathematical framework for a separable
-Gaussian Process Emulator. Tech. Rep., available from
+Gaussian Process Emulator. Tech. Rep., available from \cr
 \href{http://www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}{www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}.
 }
 \seealso{
