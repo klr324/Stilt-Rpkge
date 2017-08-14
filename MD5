@@ -1,4 +1,4 @@
-269c9f19e2909572e90961b417c130e4 *DESCRIPTION
+a010ee6bf50c22b2be42569d4ead7ac6 *DESCRIPTION
 68678286cd7bee216cd47d9b2c96ed28 *NAMESPACE
 9f98817c37246fbbccbc0ae83bcaa0e6 *R/design.mat.R
 a65692130dd59c8794c947de7b7c6d09 *R/emul.lik.R
@@ -37,6 +37,6 @@ f91588b5f77c87a43bfe352933953ede *man/emulator.Rd
 51949cf20f701917b22dc6fa59d502c7 *man/rsurface.plot.Rd
 0489b928564dd1c9b65d7dafd6f2278e *man/sep.cov.Rd
 02b3c6e4d705da2b991e526b2c07f3ee *man/stilt-internal.Rd
-bb9987431e26fd46b35f26612de48943 *man/stilt-package.Rd
+c8b1bbb9014517b41cc76e3becf75df8 *man/stilt-package.Rd
 91c8268e01a9f477409e69008688bcdc *man/test.all.Rd
 33698d6c45f341f638d88598b8375476 *man/test.csv.Rd
