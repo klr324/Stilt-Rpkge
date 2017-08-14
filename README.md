@@ -1,4 +1,5 @@
-# stilt
+# stilt 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/stilt)](https://cran.r-project.org/web/packages/stilt/index.html)
 
 **stilt** is an open-source R library for Separable Gaussian Process Interpolation, a type of statistical emulation.
 
