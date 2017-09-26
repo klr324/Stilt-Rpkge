@@ -70,8 +70,8 @@ GNU General Public License for more details. In addition, the authors
 \tabular{ll}{
 Package: \tab stilt\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-12-23\cr
+Version: \tab 1.1.0\cr
+Date: \tab 2017-08-14\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab no\cr
 }
@@ -108,7 +108,7 @@ Maintainer: Kelsey Ruckert <datamgmt@scrim.psu.edu>
 }
 \references{
 R. Olson and W. Chang (2013): Mathematical framework for a separable
-Gaussian Process Emulator. Tech. Rep., available from
+Gaussian Process Emulator. Tech. Rep., available from \cr
 \href{http://www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}{www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}.
 
 C. E. Rasmussen and C. K. I. Williams (2006): Gaussian Processes for

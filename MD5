@@ -1,4 +1,4 @@
-b9ef051b4022c23285350372cb2e15d9 *DESCRIPTION
+a010ee6bf50c22b2be42569d4ead7ac6 *DESCRIPTION
 68678286cd7bee216cd47d9b2c96ed28 *NAMESPACE
 9f98817c37246fbbccbc0ae83bcaa0e6 *R/design.mat.R
 a65692130dd59c8794c947de7b7c6d09 *R/emul.lik.R
@@ -14,7 +14,7 @@ a811ceb321c695f1a6b9da2899281b16 *R/mymessage.R
 7e66e95fccdda398c0040f309a2fe5e3 *R/optimize.emul.R
 cf4156a5efddba92d82e9c5384b90919 *R/rsurface.plot.R
 fb33a74f268f0ae57c9651e4ce59a1b7 *R/sep.cov.R
-d76f9febb0a183c4e80f0ab24d49ee93 *R/test.all.R
+2f0986112e36d3f6ba0a32bc8139846d *R/test.all.R
 7baaa7ce6aa99e0eeb972ca5cbf04e4b *R/test.csv.R
 b3277a0263d45b4b205526d7a0e59437 *data/Data.1D.model.RData
 325973f22f5de1b57fe76a793a74bc9d *data/Data.1D.par.RData
@@ -32,11 +32,11 @@ f7cdb6de0b51c9d8b5417801acb2d305 *man/Data.Sicopolis.par.Rd
 2d87e070dd891a16487268511e81234c *man/Data.UVic.par.Rd
 4e71e5a9d42ae55deebfd56ecb621d69 *man/emul.1D.Rd
 a6b494fab2724d174af9a4a06e9555a3 *man/emul.Sicopolis.Rd
-c0f57512b6fce08f61f46bf4a8820d1d *man/emul.predict.Rd
-4125caadb2f9e5db5087a1090602c34d *man/emulator.Rd
-c3c892f9cd480308f6acaf9c84f6a822 *man/rsurface.plot.Rd
-531e1a070bf817aefe0cdc85f37f815d *man/sep.cov.Rd
+51945d8238d6efe760f2c62f43921a7c *man/emul.predict.Rd
+f91588b5f77c87a43bfe352933953ede *man/emulator.Rd
+51949cf20f701917b22dc6fa59d502c7 *man/rsurface.plot.Rd
+0489b928564dd1c9b65d7dafd6f2278e *man/sep.cov.Rd
 02b3c6e4d705da2b991e526b2c07f3ee *man/stilt-internal.Rd
-f572b78c9749f379103dd60988ef5667 *man/stilt-package.Rd
+c8b1bbb9014517b41cc76e3becf75df8 *man/stilt-package.Rd
 91c8268e01a9f477409e69008688bcdc *man/test.all.Rd
-4e71fc807d6a6b5c932494ddca603dea *man/test.csv.Rd
+33698d6c45f341f638d88598b8375476 *man/test.csv.Rd
