@@ -7,7 +7,7 @@ function(final.emul, num.test, plot.std, theseed=NULL, test.runind=NULL,
 #===============
 
 #!+
-if (plot.std && !make.plot) warning("'plot.std' argument is ignored") #!+
+if (plot.std && !make.plot) cat("WARNING: 'plot.std' argument is ignored\n") #!+
 if (any(diff(test.runind) <= 0)) { #!+
   stop("***ERROR*** test.runind needs to have monotonically increasing elements\n")
 }
@@ -17,7 +17,7 @@ if (any(diff(test.runind) <= 0)) { #!+
 if (!is.null(theseed)) {
    set.seed(theseed) #!+
    if (!is.null(test.runind)) { #!+
-     warning("'theseed' argument is ignored as test runs are specified")
+     cat("WARNING: 'theseed' argument is ignored as test runs are specified\n")
    }
 }
 
