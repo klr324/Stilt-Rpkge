@@ -23,6 +23,7 @@ function(mpars, moutput, par.reg, time.reg, kappa0, zeta0,
 
     # Evaluate initial emulator likelihood #!+
     init.pars <- make.parvec(init.emul, fix.betas) #!+
+
     n.par     <- length(init.emul$t.vec)
     p.par     <- dim(init.emul$Theta.mat)[1]
     if (fix.betas) { #!+

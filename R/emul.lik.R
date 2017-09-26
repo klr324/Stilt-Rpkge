@@ -11,6 +11,20 @@ if ( (!fix.betas) && (!is.null(beta.vec))) {
   warning('beta.vec argument is ignored')
 }
 
+# IMMEDIATELY EXIT AND RETURN INFINITI IF OUTSIDE LIMITS #!+
+if (!is.null(limits.lower)) {
+  if (any(parvec < limits.lower)) {
+    llik <- -Inf
+    return(llik)
+  }
+}
+if (!is.null(limits.upper)) {
+  if (any(parvec > limits.upper)) {
+    llik <- -Inf
+    return(llik)
+  }
+}
+
 # EXTRACT PARAMETERS #!+
 rho       <- parvec[1]
 kappa     <- parvec[2]
@@ -59,22 +73,6 @@ if ((Det10[2] < 0) || (Det20[2] < 0)) {
   stop("***ERROR*** Covariance matrix determinant(s) is/are negative!")
 }
 
-
-# IF OUTSIDE LIMITS ASSUME NEGATIVE INFINITI #!+
-#!+
-if (!is.null(limits.lower)) {
-  if (any(parvec < limits.lower)) {
-    llik <- -Inf #!+
-  }
-}
-#!+
-if (!is.null(limits.upper)) {
-  if (any(parvec > limits.upper)) {
-    llik <- -Inf #!+
-  }
-}
-
-#cat('Log-likelihood=', llik, '\n')
 
 #!+
 llik
