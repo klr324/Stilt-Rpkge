@@ -13,13 +13,13 @@ function(mpars, moutput, par.reg, time.reg, kappa0, zeta0,
 
     # INITIALIZE EMULATOR #!+
     #===============================================================================
-    cat("Initializing the emulator...\n")
+    message("Initializing the emulator...")
     # Initialize emulator. Initial emulator beta parameters ($beta.vec) are estimated
     # using multiple linear regression.
     init.emul <- initialize.emul(mpars, moutput, par.reg, time.reg, kappa0, zeta0) #!+
-
-    cat("\nInitial regression parameters:\n")
-    cat(init.emul$beta.vec, '\n\n')
+    beta.vec.fm <- paste(format(init.emul$beta.vec, digits=6, trim=TRUE,
+                         scientific=FALSE), sep="", collapse=" ")
+    message("\nInitial regression parameters:\n", beta.vec.fm,"\n")
 
     # Evaluate initial emulator likelihood #!+
     init.pars <- make.parvec(init.emul, fix.betas) #!+
@@ -34,7 +34,7 @@ function(mpars, moutput, par.reg, time.reg, kappa0, zeta0,
     init.lik  <- emul.lik(init.pars, init.emul$Y.mat, init.emul$X.mat, init.emul$t.vec,
                           init.emul$Theta.mat, n.par, p.par, fix.betas, NULL, NULL,
                           beta.vec) #!+
-    cat("Initial emulator likelihood is: ", init.lik, "\n\n")
+    message("Initial emulator likelihood is: ", format(init.lik), "\n")
 
 
     # OPTIMIZE EMULATOR #!+

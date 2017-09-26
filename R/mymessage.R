@@ -1,24 +1,27 @@
 mymessage <-
 function(optresult) {
-  
+
 # Determine if optimization was successful and print a message #!+
-  if (optresult$convergence == 0) {
-    cat("Optimization SUCCESSFUL! Optimization message below:\n\n")
-    cat(optresult$message, '\n\n')
-    cat("Final parameters\n", names(optresult$par), '\n', optresult$par, '\n\n')
-    cat(optresult$iterations, " iterations were performed\n")
-    cat("Final likelihood = ", -optresult$objective, '\n\n')
+    if (optresult$convergence == 0) {
+    myparnames <- paste(names(optresult$par), sep=" ", collapse=" ")
+    mypars     <- paste(format(optresult$par, digits=6, trim=TRUE,
+                               scientific=FALSE), sep="", collapse=" ")
+    message("Optimization SUCCESSFUL! Optimization message below:\n\n",
+            optresult$message, '\n\n',
+            "Final parameterss\n", myparnames, '\n', mypars, '\n\n',
+            optresult$iterations, " iterations were performed\n",
+            "Final likelihood = ", format(-optresult$objective), '\n')
   } else {
-    cat("***ERROR*** Optimization FAILED. Optimization message below:\n\n")
-    cat(optresult$message, '\n\n')
-    cat("If you see a \"Singular Convergence\" message, this indicates that there are probably too\n")
-    cat("many parameters. A \"False convergence\" message may mean that the objective\n")
-    cat("function gradient was computed incorrectly, or relative tolerance is too\n")
-    cat("low, or that either the objective function or its gradient are discontinuous\n")
-    cat("near the current iterate of the parameters. For more information on the\n")
-    cat("optimization message see PORT documentation: Gay (1990), \"Usage summary for\n")
-    cat("selected optimization routines\", available online at\n")
-    cat("www.netlib.bell-labs.com/cm/cs/cstr/153.pdf\n\n")
+    message("***ERROR*** Optimization FAILED. Optimization message below:\n\n",
+            optresult$message, '\n\n',
+            "If you see a \"Singular Convergence\" message, this indicates that there are probably too\n",
+            "many parameters. A \"False convergence\" message may mean that the objective\n",
+            "function gradient was computed incorrectly, or relative tolerance is too\n",
+            "low, or that either the objective function or its gradient are discontinuous\n",
+    "near the current iterate of the parameters. For more information on the\n",
+    "optimization message see PORT documentation: Gay (1990), \"Usage summary for\n",
+    "selected optimization routines\", available online at\n",
+    "www.netlib.bell-labs.com/cm/cs/cstr/153.pdf\n")
   }
 
 }

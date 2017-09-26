@@ -43,9 +43,7 @@ if (is.null(test.runind)) {
    }
    stopifnot(length(test.runind) == num.test) #!+
 }
-#cat("Excluded runs: \n")
-#print(test.runind)
-#cat('\n')
+
 
 # WITHHOLD TEST RUNS FROM THE EMULATOR AND THE MODEL #!+
 #=====================================
@@ -83,7 +81,7 @@ predict.ok    <- vector(length=num.test)
 
 # PREDICT AT EACH TEST POINT #!+
 for (test.run in 1:num.test) {
-   cat("Predicting for run number: ", test.runind[test.run], "\n")
+   message("Predicting for run number: ", toString(test.runind[test.run]))
    out <- try(emul.predict(mysub.emul, Theta.mat.sub[test.run,]), silent=TRUE)#!+
    # Prediction is OK #!+
    if (is.list(out)) {
@@ -92,7 +90,7 @@ for (test.run in 1:num.test) {
      predict.ok[test.run]     <- TRUE
    # Prediction gives error #!+
    } else {
-     cat("  ...Prediction error. Likely because prediction parameters are out of bounds\n")
+     message("  ...Prediction error. Likely because prediction parameters are out of bounds")
      emul.out.test[test.run,] <- NA
      emul.std.test[test.run,] <- NA
      predict.ok[test.run]     <- FALSE
@@ -101,7 +99,7 @@ for (test.run in 1:num.test) {
 
 #ERROR EXCEPTION #!+
 if (any(!predict.ok)) {
-  cat("NOTE:", sum(!predict.ok), " prediction points were omitted as they are out of range\n")
+  message("NOTE: ", toString(sum(!predict.ok)), " prediction points were omitted\n")
 }
 
 # COVERAGE
