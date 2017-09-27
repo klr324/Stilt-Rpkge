@@ -125,6 +125,9 @@ Emulator. A list with components (see also Reference in the References Section)
   in the regression matrix}
 \item{$time.reg}{Logical, specifies whether to include time into the
   regression matrix}
+\item{$Sigma.mats}{List of two precomputed matrices that may be useful:
+  \code{$Sigma.t.mat} and \code{$Sigma.theta.mat} (see References)}
+\item{$Sigma.theta.inv.mat}{Inverse of \code{$Sigma.mats$Sigma.theta.mat}}
 }
 \references{
 R. Olson and W. Chang (2013): Mathematical framework for a separable

@@ -12,25 +12,7 @@ emul.predict(emul, theta.star)
 \arguments{
   \item{emul}{
 Standard emulator object, as output, for example, by the 'emulator'
-function. To re-cap, it is a list with these elements:
-  \describe{
- \item{$Theta.mat}{Theta matrix. [row, col] = [run number, parameter
-  number]}
-\item{$t.vec}{Time vector}
-\item{$Y.mat}{Data matrix Y}
-\item{$X.mat}{Regression matrix}
-\item{$beta.vec}{A vector of regression parameters}
-\item{$kappa}{ Parameter covariance scaling factor}
-\item{$phi.vec}{A vector of range parameters phi}
-\item{$zeta}{Nugget}
-\item{$n}{Length of time dimension}
-\item{$rho}{Time AR(1) parameter}
-\item{$p}{Number of model runs in the ensemble}
-\item{$vecC}{Data matrix Y minus the mean vector}
-\item{$par.reg}{ Logical vector specifying which parameters to include
-  in the regression matrix}
-\item{$time.reg}{Logical, specifies whether to include time into the
-  regression matrix}}
+function.
 }
   \item{theta.star}{
 Parameter setting at which to predict. Must have the same number of
