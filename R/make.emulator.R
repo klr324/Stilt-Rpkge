@@ -35,6 +35,12 @@ emul$vecC      <- Y.mat - mu.vec
 emul$par.reg   <- par.reg
 emul$time.reg  <- time.reg
 
+# Covariance matrices necessary for prediction
+emul$Sigma.mats      <- sep.cov(Theta.mat, t.vec, emul$rho, emul$kappa,
+                               emul$phi.vec, emul$zeta)
+Sigma.theta.Chol.mat <- chol(emul$Sigma.mats$Sigma.theta.mat)
+emul$Sigma.theta.inv.mat  <- chol2inv(Sigma.theta.Chol.mat)
+
 # Output #!+
 emul
 }
