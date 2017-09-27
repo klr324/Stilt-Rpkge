@@ -11,10 +11,8 @@ if (anyhigh || anylow ) stop("***ERROR*** Prediction point is outside of ensembl
 
 #PRELIMINARIES #!+
 I.mat                <- diag(emul$n)#!+
-Sigma.mats           <- sep.cov(emul$Theta.mat, emul$t.vec, emul$rho, emul$kappa,
-                               emul$phi.vec, emul$zeta) #!+
-Sigma.theta.Chol.mat <- chol(Sigma.mats$Sigma.theta.mat)
-Sigma.theta.inv.mat  <- chol2inv(Sigma.theta.Chol.mat) #!+
+Sigma.mats           <- emul$Sigma.mats #!+
+Sigma.theta.inv.mat  <- emul$Sigma.theta.inv.mat #!+
 n.par                <- emul$n #!+
 p.par                <- emul$p #!+
 m.par                <- dim(emul$Theta.mat)[2] #!+
