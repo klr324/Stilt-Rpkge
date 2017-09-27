@@ -51,27 +51,18 @@ vec.C                <- Y.mat - mu.vec
 C.mat                <- matrix(as.vector(vec.C), nrow=p.par, ncol=n.par)
 
 # CALCULATE LIKELIHOOD #!+
-# The new determinant function behaves fine for matrices with very large and close to 0
-# numbers
+# Determinants are calculated from the diagonal elements of the Cholesky factors
 T1.mat              <- Sigma.theta.inv.mat%*%C.mat%*%Sigma.t.inv.mat
 T2.mat              <- C.mat*T1.mat
 Term1               <- -0.5*sum(T2.mat)
-# Det10, Det20: 1st element is ln(modulus of the determinant), the 2nd is the sign of the determinant
-Det10               <- unname(unlist(determinant(Sigma.mats$Sigma.t.mat, logarithm=TRUE)))
-Det1                <- p.par*Det10[1]
-Det20               <- unname(unlist(determinant(Sigma.mats$Sigma.theta.mat,
-                                                 logarithm=TRUE)))
-Det2                <- n.par*Det20[1]
+# Det10, Det20: ln(det)
+Det10               <- 2*(sum(log(diag(Sigma.t.Chol.mat))))
+Det1                <- p.par*Det10
+Det20               <- 2*(sum(log(diag(Sigma.theta.Chol.mat))))
+Det2                <- n.par*Det20
 Term2               <- -0.5*(Det1+Det2)
 Term3               <- -0.5*n.par*p.par*log(2*pi)
 llik                 <- Term1 + Term2 + Term3
-
-
-# CHECK THAT DETERMINANTS ARE POSITIVE #!+
-if ((Det10[2] < 0) || (Det20[2] < 0)) {
-  stop("***ERROR*** Covariance matrix determinant(s) is/are negative!")
-}
-
 
 #!+
 llik
