@@ -42,14 +42,13 @@ if (kappa == 0 && zeta == 0) stop("***ERROR*** Kappa and zeta can't be both 0!\n
 # SET-UP MATRICES #!+
 Sigma.mats          <- sep.cov(Theta.mat, t.vec, rho, kappa, phi.vec, zeta)
 
-#browser()
-
-Sigma.theta.inv.mat <- solve(Sigma.mats$Sigma.theta.mat)
-Sigma.t.inv.mat     <- solve(Sigma.mats$Sigma.t.mat)
-mu.vec              <- X.mat%*%as.matrix(beta.vec)
-vec.C               <- Y.mat - mu.vec
-C.mat               <- matrix(as.vector(vec.C), nrow=p.par, ncol=n.par)
-
+Sigma.theta.Chol.mat <- chol(Sigma.mats$Sigma.theta.mat)
+Sigma.theta.inv.mat  <- chol2inv(Sigma.theta.Chol.mat)
+Sigma.t.Chol.mat     <- chol(Sigma.mats$Sigma.t.mat)
+Sigma.t.inv.mat      <- chol2inv(Sigma.t.Chol.mat)
+mu.vec               <- X.mat%*%as.matrix(beta.vec)
+vec.C                <- Y.mat - mu.vec
+C.mat                <- matrix(as.vector(vec.C), nrow=p.par, ncol=n.par)
 
 # CALCULATE LIKELIHOOD #!+
 # The new determinant function behaves fine for matrices with very large and close to 0
