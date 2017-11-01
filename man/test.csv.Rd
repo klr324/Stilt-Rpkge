@@ -65,7 +65,7 @@ not plotted. Model output is beige, and emulator output is brown.
   
 By 'withholding' runs from an emulator it is meant that the emulator
 statistical parameters are kept the same, whereas the withheld runs are
-eliminated from the all relevant emulator components. The ensemble size \code{final.emul$p} is reduced
+eliminated from all relevant emulator components. The ensemble size \code{final.emul$p} is reduced
 accordingly. 
 }
 \value{
