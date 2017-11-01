@@ -1,6 +1,6 @@
 ## Test environments
 * local system: x86_64, darwin13.4.0 | R 3.3.2
-* system: x86_64, linux-gnu | R 3.4.0 
+* system: x86_64, redhat-linux-gnu | R 3.4.0 
 * system: x86_64, mingw32 | R 3.4.1
 
 ## R CMD check results
