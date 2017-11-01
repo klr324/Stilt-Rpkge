@@ -1,3 +1,16 @@
+# stilt v1.2.0 (Release date: 2017-10-31)
+==============
+
+Changes:
+
+* In emul.lik.R and emulator.predict.R, the emulator now uses Cholesky decomposition for matrix inversion instead of using solve(). The relevant determinants are calculated from the diagonal entries of the Cholesky factors.
+* The inverse of the parameter covariance is pre-calculated and attached to the emulator list, so that the inverse operation can be skipped for prediction at many points.
+* Moved fields from depends to imports in the DESCRIPTION file.
+* Minor code refactoring to improve functionality:
+	- Use warning() and message() instead of cat for warnings and messages
+	- Set llik <- -Inf in emul.lik.R if outside limits and exit to avoid calculating the case
+	- Streamlined the naming convention of “parvec” so for loops and an if statement are not needed
+
 # stilt v1.1.0 (Release date: 2017-08-14)
 ==============
 
