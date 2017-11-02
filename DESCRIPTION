@@ -10,7 +10,7 @@ License: GPL-3
 Depends: R (>= 3.2.4)
 Imports: fields
 LazyLoad: no
-Packaged: 2017-11-02 15:31:13 UTC; Ruckert
+Packaged: 2017-11-02 13:40:52 UTC; Ruckert
 NeedsCompilation: no
 Repository: CRAN
 Date/Publication: 2017-11-02 
