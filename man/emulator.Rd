@@ -153,7 +153,7 @@ cat("Range parameters are:", emul.1D$phi.vec, "\n")
 cat("Regression parameters are:", emul.1D$beta.vec, "\n")
 
 # Predict using the emulator at Theta*=3
-pred.1D <- emul.predict(emul.1D, 3)
+pred.1D <- predict(emul.1D, 3)
 
 # Plot the prediction
 plot(emul.1D$t.vec, pred.1D$mean, xlab="Year", ylab="Sample Output")
