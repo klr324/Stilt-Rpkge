@@ -1,7 +1,7 @@
 \name{emul.predict}
 \alias{emul.predict}
 \title{
-To predict using an emulator
+To predict using an emulator (Deprecated)
 }
 \description{
 To predict using an emulator. This function is deprecated. Use \code{\link{predict.emul}} instead.
