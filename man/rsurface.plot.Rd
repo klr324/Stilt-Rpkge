@@ -64,7 +64,7 @@ because in current specification, the 'emul.predict' function predicts
 the entire time-series (or space transect) at once.
 }
 \seealso{
-\code{\link{emulator}}, \code{\link{emul.predict}}
+\code{\link{emulator}}, \code{\link{predict.emul}}
 }
 \examples{
 # Plot the SICOPOLIS ice mass loss in year 2500 as a function of Snow

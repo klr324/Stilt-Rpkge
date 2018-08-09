@@ -40,7 +40,7 @@ Gaussian Process Emulator. Tech. Rep., available from \cr
 Prediction outside the emulator range ("extrapolation") is currently not allowed.
 }
 \seealso{
-  \code{\link{rsurface.plot}}, \code{\link{test.csv}}, \code{\link{emulator}}, \code{\link{predict.emul}
+  \code{\link{rsurface.plot}}, \code{\link{test.csv}}, \code{\link{emulator}}, \code{\link{predict.emul}}
 }
 \examples{
 # Predict using the SICOPOLIS model at a mid-range parameter setting, and plot
