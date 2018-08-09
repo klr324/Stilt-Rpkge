@@ -1,5 +1,6 @@
 \name{predict.emul}
 \alias{predict.emul}
+\alias{predict}
 \title{
 Predict Method for an emulator
 }
@@ -8,10 +9,10 @@ To predict using an emulator
 }
 \usage{
 ## S3 method for class 'emul'
-predict(emul, theta.star)
+predict(object, theta.star, ...)
 }
 \arguments{
-  \item{emul}{
+  \item{object}{
 Standard emulator object of class "emul", as output, for example, by the 'emulator'
 function.
 }
@@ -19,6 +20,9 @@ function.
 Parameter setting at which to predict. Must have the same number of
 elements as there are columns in the \code{emul$Theta.mat}. Vector (or,
 for a 1 parameter ensemble, a single numeric value).
+}
+  \item{...}{
+Additional optional arguments. At present no optional arguments are used.
 }
 }
 \details{
