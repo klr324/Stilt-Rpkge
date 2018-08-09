@@ -1,17 +1,18 @@
-\name{emul.predict}
-\alias{emul.predict}
+\name{predict.emul}
+\alias{predict.emul}
 \title{
-To predict using an emulator
+Predict Method for an emulator
 }
 \description{
-To predict using an emulator. This function is deprecated. Use \code{\link{predict.emul}} instead.
+To predict using an emulator
 }
 \usage{
-emul.predict(emul, theta.star)
+## S3 method for class 'emul'
+predict(emul, theta.star)
 }
 \arguments{
   \item{emul}{
-Standard emulator object, as output, for example, by the 'emulator'
+Standard emulator object of class "emul", as output, for example, by the 'emulator'
 function.
 }
   \item{theta.star}{
@@ -40,13 +41,13 @@ Gaussian Process Emulator. Tech. Rep., available from \cr
 Prediction outside the emulator range ("extrapolation") is currently not allowed.
 }
 \seealso{
-  \code{\link{rsurface.plot}}, \code{\link{test.csv}}, \code{\link{emulator}}, \code{\link{predict.emul}
+  \code{\link{rsurface.plot}}, \code{\link{test.csv}}, \code{\link{emulator}}
 }
 \examples{
 # Predict using the SICOPOLIS model at a mid-range parameter setting, and plot
 # the prediction and associated uncertainty
 data(emul.Sicopolis)
-pred <- emul.predict(emul.Sicopolis, c(3, 10, 50, 3, 12.5))
+pred <- predict(emul.Sicopolis, c(3, 10, 50, 3, 12.5))
 plot.default(NA, xlim=range(emul.Sicopolis$t.vec),
      ylim=range(pred$mean), xlab="Year",
      ylab="Ice Mass Loss relative to year 2003")
@@ -61,7 +62,7 @@ lines(emul.Sicopolis$t.vec, pred$mean - std, col="brown", lty=2)
 data(Data.1D.par)
 data(Data.1D.model)
 emul.1D <- emulator(Data.1D.par, Data.1D.model, TRUE, TRUE, 100, 0.1)
-pred.1D <- emul.predict(emul.1D, 8)
+pred.1D <- predict(emul.1D, 8)
 plot(emul.1D$t.vec, pred.1D$mean, xlab="Year",
      ylab="Sample Model Output at Theta*=8")
 }
