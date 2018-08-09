@@ -43,6 +43,7 @@ Prediction outside the emulator range ("extrapolation") is currently not allowed
   \code{\link{rsurface.plot}}, \code{\link{test.csv}}, \code{\link{emulator}}, \code{\link{predict.emul}}
 }
 \examples{
+\dontrun{
 # Predict using the SICOPOLIS model at a mid-range parameter setting, and plot
 # the prediction and associated uncertainty
 data(emul.Sicopolis)
@@ -64,4 +65,5 @@ emul.1D <- emulator(Data.1D.par, Data.1D.model, TRUE, TRUE, 100, 0.1)
 pred.1D <- emul.predict(emul.1D, 8)
 plot(emul.1D$t.vec, pred.1D$mean, xlab="Year",
      ylab="Sample Model Output at Theta*=8")
+}
 }
