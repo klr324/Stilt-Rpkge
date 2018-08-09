@@ -9,7 +9,7 @@ To predict using an emulator
 }
 \usage{
 ## S3 method for class 'emul'
-predict(object, theta.star, ...)
+\method{predict}(object, theta.star, ...)
 }
 \arguments{
   \item{object}{
