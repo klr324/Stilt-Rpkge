@@ -8,8 +8,7 @@ Predict Method for an emulator
 To predict using an emulator
 }
 \usage{
-## S3 method for class 'emul'
-\method{predict}(object, theta.star, ...)
+\method{predict}{emul}(object, theta.star, \dots)
 }
 \arguments{
   \item{object}{
@@ -21,7 +20,7 @@ Parameter setting at which to predict. Must have the same number of
 elements as there are columns in the \code{emul$Theta.mat}. Vector (or,
 for a 1 parameter ensemble, a single numeric value).
 }
-  \item{...}{
+  \item{\dots}{
 Additional optional arguments. At present no optional arguments are used.
 }
 }
