@@ -1,6 +1,7 @@
 
 # Export external functions #!+
 export(emulator)
+export(predict.emul)
 export(emul.predict)
 export(rsurface.plot)
 export(sep.cov)
