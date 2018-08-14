@@ -2,7 +2,7 @@
 \alias{predict.emul}
 \alias{predict}
 \title{
-Predict Method for an emulator
+Predict Method for an Emulator
 }
 \description{
 To predict using an emulator
@@ -12,12 +12,12 @@ To predict using an emulator
 }
 \arguments{
   \item{object}{
-Standard emulator object of class "emul", as output, for example, by the 'emulator'
+Standard emulator object of class "emul", as output, for example, by the \code{\link{emulator}}
 function.
 }
   \item{theta.star}{
 Parameter setting at which to predict. Must have the same number of
-elements as there are columns in the \code{emul$Theta.mat}. Vector (or,
+elements as there are columns in the \code{object$Theta.mat}. Vector (or,
 for a 1 parameter ensemble, a single numeric value).
 }
   \item{\dots}{
@@ -30,10 +30,10 @@ theory. For more details, see References.
 }
 \value{
 Prediction at the parameter setting \code{theta.star} for all times
-specified by \code{emul$t.vec}. List with components
-\item{mean}{Posterior mean. n*1 matrix. Rows correspond to the times of \code{emul$t.vec}.}
+specified by \code{object$t.vec}. List with components
+\item{mean}{Posterior mean. n*1 matrix. Rows correspond to the times of \code{object$t.vec}.}
 \item{covariance}{ Posterior covariance matrix. n*n matrix. Diagonal
-  elements represent variances at each time in \code{emul$t.vec}.}
+  elements represent variances at each time in \code{object$t.vec}.}
 }
 \references{
   R. Olson and W. Chang (2013): Mathematical framework for a separable
