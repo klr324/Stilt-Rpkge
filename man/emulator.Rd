@@ -107,7 +107,8 @@ parameter and time dimensions to use as regressors via the
     }
 }
 \value{
-Emulator. A list with components (see also Reference in the References Section)
+Emulator returns an object of \code{\link{class}} "emul" and is a list with components 
+(see also Reference in the References Section).
 \item{$Theta.mat}{Theta matrix. [row, col] = [run number, parameter
   number]}
 \item{$t.vec}{Time vector}

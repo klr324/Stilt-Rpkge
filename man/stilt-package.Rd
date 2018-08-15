@@ -71,7 +71,7 @@ GNU General Public License for more details. In addition, the authors
 Package: \tab stilt\cr
 Type: \tab Package\cr
 Version: \tab 1.3.0\cr
-Date: \tab 2017-11-02\cr
+Date: \tab 2017-08-15\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab no\cr
 }
