@@ -38,7 +38,7 @@ for (xind in 1:n1) {
   for (yind in 1:n2) {
      theta.vec          <- parvals
      theta.vec[parind]  <- c(x.vec[xind], y.vec[yind])
-     predict            <- emul.predict(emul, theta.vec)
+     predict            <- predict(emul, theta.vec)
      mu.mat[xind, yind] <- predict$mean[tind]
   }
 }

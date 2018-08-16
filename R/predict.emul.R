@@ -1,7 +1,7 @@
-emul.predict <-
-function(emul, theta.star) {
-  .Deprecated("predict")
+predict.emul <-
+function(object, theta.star, ...) {
 
+emul <- object
 #AN EXCEPTION FOR EXTRAPOLATION #!+
 par.min             <- apply(emul$Theta.mat, 2, min)
 par.max             <- apply(emul$Theta.mat, 2, max)

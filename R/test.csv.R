@@ -82,7 +82,7 @@ predict.ok    <- vector(length=num.test)
 # PREDICT AT EACH TEST POINT #!+
 for (test.run in 1:num.test) {
    message("Predicting for run number: ", toString(test.runind[test.run]))
-   out <- try(emul.predict(mysub.emul, Theta.mat.sub[test.run,]), silent=TRUE)#!+
+   out <- try(predict(mysub.emul, Theta.mat.sub[test.run,]), silent=TRUE)#!+
    # Prediction is OK #!+
    if (is.list(out)) {
      emul.out.test[test.run,] <- out$mean

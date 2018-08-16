@@ -107,7 +107,8 @@ parameter and time dimensions to use as regressors via the
     }
 }
 \value{
-Emulator. A list with components (see also Reference in the References Section)
+Emulator returns an object of \code{\link{class}} "emul" and is a list with components 
+(see also Reference in the References Section).
 \item{$Theta.mat}{Theta matrix. [row, col] = [run number, parameter
   number]}
 \item{$t.vec}{Time vector}
@@ -153,7 +154,7 @@ cat("Range parameters are:", emul.1D$phi.vec, "\n")
 cat("Regression parameters are:", emul.1D$beta.vec, "\n")
 
 # Predict using the emulator at Theta*=3
-pred.1D <- emul.predict(emul.1D, 3)
+pred.1D <- predict(emul.1D, 3)
 
 # Plot the prediction
 plot(emul.1D$t.vec, pred.1D$mean, xlab="Year", ylab="Sample Output")

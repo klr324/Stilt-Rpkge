@@ -1,3 +1,13 @@
+# stilt v1.3.0 (Release date: 2018-08-15)
+==============
+
+Changes:
+
+* Set output of emulator.R to class 'emul'.
+* Append class 'emus' to emul.1D and emul.Sicopolis.
+* Change emul.predict.R to predict.emul.R to use the predict function in R via the S3 method. emul.predict.R is then depreciated.
+* Housekeeping changes to update the descriptions.
+
 # stilt v1.2.0 (Release date: 2017-11-02)
 ==============
 

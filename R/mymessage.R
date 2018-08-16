@@ -8,7 +8,7 @@ function(optresult) {
                                scientific=FALSE), sep="", collapse=" ")
     message("Optimization SUCCESSFUL! Optimization message below:\n\n",
             optresult$message, '\n\n',
-            "Final parameterss\n", myparnames, '\n', mypars, '\n\n',
+            "Final parameters\n", myparnames, '\n', mypars, '\n\n',
             optresult$iterations, " iterations were performed\n",
             "Final likelihood = ", format(-optresult$objective), '\n')
   } else {

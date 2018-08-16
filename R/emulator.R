@@ -41,6 +41,7 @@ function(mpars, moutput, par.reg, time.reg, kappa0, zeta0,
     # OPTIMIZE EMULATOR #!+
     #===============================================================================
     final.emul <- optimize.emul(init.emul, fix.betas, twice, myrel.tol ) #!+
+    class(final.emul) <- append(class(final.emul),"emul") # set emul class
 
     # OUTPUT #!+
     #=========

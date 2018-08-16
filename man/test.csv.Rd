@@ -86,7 +86,7 @@ Gaussian Process Emulator. Tech. Rep., available from \cr
 \href{http://www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}{www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}.
 }
 \seealso{
-\code{\link{test.all}}, \code{\link{emul.predict}}
+\code{\link{test.all}}, \code{\link{predict.emul}}
 }
 \examples{
 # Test the 1D emulator by withholding the second parameter

@@ -35,7 +35,7 @@ GNU General Public License for more details. In addition, the authors
   \describe{
   \item{emulator}{Fits a separable Gaussian Process emulator to ensemble model
     output}
-  \item{emul.predict}{Predicts using a Gaussian Process emulator}
+  \item{predict.emul}{Predicts using a Gaussian Process emulator}
   \item{rsurface.plot}{Plots a 2D model response surface}
   \item{test.csv}{Cross-validates an emulator by removing one or many
     model runs, training the emulator on the remaining runs, and then
@@ -70,8 +70,8 @@ GNU General Public License for more details. In addition, the authors
 \tabular{ll}{
 Package: \tab stilt\cr
 Type: \tab Package\cr
-Version: \tab 1.2.0\cr
-Date: \tab 2017-11-02\cr
+Version: \tab 1.3.0\cr
+Date: \tab 2017-08-15\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab no\cr
 }

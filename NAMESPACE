@@ -1,3 +1,5 @@
+# Register S3 method defining a predict method for class emul #!+
+S3method(predict, emul)
 
 # Export external functions #!+
 export(emulator)
@@ -13,4 +15,6 @@ import(fields)
 # Import undefined global functions or variables: #!+
 importFrom("grDevices", "topo.colors")
 importFrom("graphics", "filled.contour", "lines", "par", "plot", "plot.default", "title")
-importFrom("stats", "lm", "nlminb", "runif")
+importFrom("stats", "lm", "nlminb", "runif", "predict")
+
+

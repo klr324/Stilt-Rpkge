@@ -47,9 +47,11 @@ specify X and Y grid size. Optionally, plot limits can be specified
 through \code{zlim}. The code relies on the filled.contour function.
 }
 \section{Note}{
-  Evaluation of this function (especially for large datasets and grid
-  sizes) might take a long time.
-  }
+Evaluation of this function (especially for large datasets and grid
+sizes) might take a long time. This is because in current specification, 
+the 'predict.emul' function predicts the entire time-series (or space 
+transect) at once.
+}
 \value{
 None
 }
@@ -58,13 +60,8 @@ None
 Gaussian Process Emulator. Tech. Rep., available from \cr
 \href{http://www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}{www.scrimhub.org/resources/stilt/Olson_and_Chang_2013_Stilt_Emulator_Technical_Report.pdf}.
 }
-\note{
-If grid size is large, the function can take considerable time. This is
-because in current specification, the 'emul.predict' function predicts
-the entire time-series (or space transect) at once.
-}
 \seealso{
-\code{\link{emulator}}, \code{\link{emul.predict}}
+\code{\link{emulator}}, \code{\link{predict.emul}}
 }
 \examples{
 # Plot the SICOPOLIS ice mass loss in year 2500 as a function of Snow
