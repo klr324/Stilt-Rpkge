@@ -50,6 +50,6 @@ Copyright 2013 Roman Olson, Won Chang, Klaus Keller, and Murali Haran
 
 **stilt** is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-**stilt** is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU General Public License](http://www.gnu.org/licenses/) for more details. In addition, the authors maintain no responsibility for any errors or bugs in the code. 
+**stilt** is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU General Public License](http://www.gnu.org/licenses/) for more details. In addition, the authors and maintainer maintain no responsibility for any errors or bugs in the code. 
 
 <p align="center"><i>This work was supported by the National Science Foundation through the Network for Sustainable Climate Risk Management (SCRiM) under NSF cooperative agreement GEO-1240507.</i></p>
